@@ -22,7 +22,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ТОВ «Оскар буд 2021» — Оренда Caterpillar 426</title>
+    <title>ТОВ «Оскар буд 2021» — Оренда спецтехніки</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -111,14 +111,12 @@
             color: var(--accent-gold);
         }
 
-        /* Правий блок шапки для гармонійного об'єднання телефону та меню */
         .header-actions {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
-        /* Оформлення номеру телефону */
         .header-phone {
             display: inline-flex;
             align-items: center;
@@ -155,7 +153,6 @@
             transform: rotate(15deg) scale(1.1);
         }
 
-        /* --- КНОПКА МЕНЮ --- */
         .menu-wrapper {
             position: relative;
             display: flex;
@@ -250,7 +247,6 @@
             background: rgba(224, 169, 109, 0.12);
         }
 
-        /* Випадаючі підменю (Каталог та Контакти) */
         .submenu {
             display: none;
             background: rgba(28, 37, 65, 0.5);
@@ -458,7 +454,6 @@
             margin-left: 1rem;
         }
 
-        /* --- КЕРУВАННЯ ВКЛАДКАМИ --- */
         .tab-content {
             display: none;
         }
@@ -467,7 +462,6 @@
             display: block;
         }
 
-        /* --- СТИЛІ СЕКЦІЇ ГАЛЕРЕЇ ТА КОНТАКТІВ --- */
         .page-section {
             max-width: 1200px;
             margin: 2rem auto 0;
@@ -539,7 +533,6 @@
             transform: scale(1.08);
         }
 
-        /* Стилі для контентної сторінки Контактів */
         .contacts-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -602,7 +595,6 @@
             transform: scale(1.1);
         }
 
-        /* Лайтбокс перегляду фото */
         .lightbox-modal {
             display: none;
             position: fixed;
@@ -657,7 +649,6 @@
         <div class="logo" onclick="switchTab('main')">Оскар <span>буд 2021</span></div>
         
         <div class="header-actions">
-            <!-- Оформлений номер телефону -->
             <a href="tel:+380675002629" class="header-phone">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -665,7 +656,6 @@
                 +38 (067) 500-26-29
             </a>
             
-            <!-- Меню -->
             <div class="menu-wrapper">
                 <button class="menu-toggle-btn" onclick="toggleMenu()" aria-label="Меню">
                     <span>☰</span> Меню
@@ -673,24 +663,20 @@
                 <nav class="dropdown-menu" id="dropdownMenu">
                     <a onclick="switchTab('main')">🏠 Головна</a>
 
-                    <!-- ПУНКТ КАТАЛОГ -->
                     <div class="catalog-toggle" onclick="toggleSubmenu(event, 'catalogSubmenu', 'submenuArrow')">
                         <span>📋 Каталог</span>
                         <span class="arrow" id="submenuArrow">▼</span>
                     </div>
                     
-                    <!-- Підменю типів спецтехніки -->
                     <div class="submenu" id="catalogSubmenu">
+                        <a href="#front-loaders" onclick="switchTab('main'); closeMenu();">🚜 Фронтальні навантажувачі</a>
                         <a href="#backhoe-loaders" onclick="switchTab('main'); closeMenu();">🚜 Навантажувачі-екскаватори</a>
                         <a href="#crawler-excavators" onclick="switchTab('main'); closeMenu();">🚜 Екскаватори гусеничні</a>
                         <a href="#mobile-cranes" onclick="switchTab('main'); closeMenu();">🏗 Автомобільні крани</a>
-                        <a href="#other-equipment" onclick="switchTab('main'); closeMenu();">⚙️ Інша спецтехніка</a>
                     </div>
 
-                    <!-- ВКЛАДКА ГАЛЕРЕЇ -->
                     <a onclick="switchTab('gallery')">🖼 Галерея</a>
 
-                    <!-- ПУНКТ КОНТАКТИ -->
                     <div class="contacts-toggle" onclick="switchTab('contacts')">
                         <span>📞 Контакти</span>
                     </div>
@@ -719,6 +705,31 @@
         </section>
 
         <main class="container">
+            <!-- Фронтальний навантажувач XCMG XC958 -->
+            <div class="tech-card" id="front-loaders">
+                <div class="card-image-container">
+                    <span class="card-badge">Фронтальний навантажувач</span>
+                    <img src="xcmg_xc958.jpg" alt="Фронтальний навантажувач XCMG XC958">
+                </div>
+                
+                <div class="card-details">
+                    <div>
+                        <h2 class="card-title">XCMG XC958</h2>
+                        <p class="card-subtitle">Технічні характеристики та комплектація</p>
+                        
+                        <ul class="specs-list">
+                            <li>Експлуатаційна маса: <span>17 630 кг</span></li>
+                            <li>Вантажопідйомність: <span>5 500 кг</span></li>
+                            <li>Обʼєм ковша: <span>3,2 м³</span></li>
+                            <li>Двигун: <span>Weichai WD10G220E21</span></li>
+                            <li>Потужність: <span>162 кВт</span></li>
+                            <li>Висота розвантаження (по шарніру / 45°): <span>4450 / 3380 мм</span></li>
+                            <li>Габарити (Д × Ш × В): <span>8670 х 2850 х 3455 мм</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <!-- Навантажувачі-екскаватори -->
             <div class="tech-card" id="backhoe-loaders">
                 <div class="card-image-container">
@@ -744,6 +755,37 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Автомобільні крани -->
+            <div class="tech-card" id="mobile-cranes">
+                <div class="card-image-container">
+                    <span class="card-badge">Автомобільний кран</span>
+                    <img src="image_7.png" alt="Автокран XCMG QY25K5D">
+                </div>
+                
+                <div class="card-details">
+                    <div>
+                        <h2 class="card-title">XCMG QY25K5D</h2>
+                        <p class="card-subtitle">Технічні характеристики та комплектація</p>
+                        
+                        <ul class="specs-list">
+                            <li>Вантажопідйомність: <span>25 000 кг</span></li>
+                            <li>Двигун: <span>Shanghai Diesel SC9DF290Q5</span></li>
+                            <li>Потужність двигуна: <span>211 кВт</span></li>
+                            <li>Радіус повороту по противазі: <span>3360 мм</span></li>
+                            <li>Макс. грузовий момент (складена стріла): <span>1005 кН*м</span></li>
+                            <li>Макс. грузовий момент (витягнута стріла): <span>672 кН*м</span></li>
+                            <li>Макс. грузовий момент (стріла + гусьок): <span>465 кН*м</span></li>
+                            <li>Довжина стріли (базова): <span>10,5 м</span></li>
+                            <li>Довжина стріли (витягнута): <span>41 м</span></li>
+                            <li>Довжина стріли + гусьок: <span>49,3 м</span></li>
+                            <li>Кут приєднання гуська: <span>0°, 15°, 30°</span></li>
+                            <li>Максимальна швидкість ходу: <span>80 км/год</span></li>
+                            <li>Габарити (Д × Ш × В): <span>12780 х 2500 х 3400 мм</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 
@@ -755,23 +797,27 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="IMG_1247.JPG">
+                    <img src="image_2.png" alt="Фронтальний навантажувач XCMG XC958">
+                </div>
+
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="image_5.png" alt="Гусеничний екскаватор Kobelco SK210 на тралі Volvo">
                 </div>
                 
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="IMG_1248.JPG">
+                    <img src="image_6.png" alt="Екскаватор Kobelco SK260D на демонтажних роботах">
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="IMG_1249.JPG">
+                    <img src="image_7.png" alt="Автокран XCMG QY25K5D">
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="IMG_1352.JPG">
+                    <img src="image_8.png" alt="Фронтальний навантажувач XCMG XC958">
                 </div>
 
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="IMG_1351.JPG">
+                    <img src="xcmg_xc925jpg" alt="Навантажувач XCMG XC958 на об'єкті">
                 </div>
             </div>
         </section>
@@ -787,7 +833,6 @@
                 <p>ТОВ «Оскар буд 2021» завжди відкрите до співпраці з новими та постійними клієнтами. Телефонуйте або пишіть на електронну пошту!</p>
                 
                 <div class="contact-methods">
-                    <!-- Телефон -->
                     <a href="tel:+380675002629" class="contact-box">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -795,7 +840,6 @@
                         +38 (067) 500-26-29
                     </a>
 
-                    <!-- Пошта -->
                     <a href="mailto:oscarbud@ukr.net" class="contact-box">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="fill: var(--accent-gold);">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -807,7 +851,6 @@
         </section>
     </div>
 
-    <!-- Модальне вікно для перегляду фото -->
     <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
         <img id="lightboxImg" src="" alt="Перегляд фото">
     </div>
@@ -828,13 +871,11 @@
         const lightboxModal = document.getElementById('lightboxModal');
         const lightboxImg = document.getElementById('lightboxImg');
 
-        /* Перемикання вкладок та динамічна зміна фону */
         function switchTab(tabName) {
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
 
-            // Знімаємо всі класи модифікаторів фону з body
             document.body.classList.remove('gallery-active', 'contacts-active');
 
             if (tabName === 'gallery') {
